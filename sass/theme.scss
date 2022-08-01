@@ -1,0 +1,57 @@
+//@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+$font-family-base: "Handlee", cursive;
+$font-size-base: 1.2rem;
+// Arabic font
+
+@import "./_bs5/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "./_bs5/functions";
+@import "./_bs5/variables";
+@import "./_bs5/maps";
+@import "./_bs5/mixins";
+@import "./_bs5/utilities";
+
+// Layout & components
+@import "./_bs5/root";
+@import "./_bs5/reboot";
+@import "./_bs5/type";
+@import "./_bs5/images";
+@import "./_bs5/containers";
+@import "./_bs5/grid";
+@import "./_bs5/tables";
+@import "./_bs5/forms";
+@import "./_bs5/buttons";
+@import "./_bs5/transitions";
+@import "./_bs5/dropdown";
+@import "./_bs5/button-group";
+@import "./_bs5/nav";
+@import "./_bs5/navbar";
+@import "./_bs5/card";
+@import "./_bs5/accordion";
+@import "./_bs5/breadcrumb";
+@import "./_bs5/pagination";
+@import "./_bs5/badge";
+@import "./_bs5/alert";
+@import "./_bs5/progress";
+@import "./_bs5/list-group";
+@import "./_bs5/close";
+@import "./_bs5/toasts";
+@import "./_bs5/modal";
+@import "./_bs5/tooltip";
+@import "./_bs5/popover";
+@import "./_bs5/carousel";
+@import "./_bs5/spinners";
+@import "./_bs5/offcanvas";
+@import "./_bs5/placeholders";
+
+// Helpers
+@import "./_bs5/helpers";
+
+// Utilities
+@import "./_bs5/utilities/api";
+// scss-docs-end import-stack

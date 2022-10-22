@@ -1,57 +1,268 @@
 //@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+// tijwal google font
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
 
-$font-family-base: "Handlee", cursive;
-$font-size-base: 1.2rem;
+//$font-family-base: "Tajawal", sans-serif;
+$line-height-base : 1.5;
+
 // Arabic font
+$secondary : #dfdfdf;
 
-@import "./_bs5/mixins/banner";
+$btn-border-width : 2px;
+$btn-font-weight : 600;
+$hr-margin-y : .5rem;
+$hr-height : 0.0625rem;
+$hr-opacity : 0.5;
+$hr-border-color : rgba($secondary, $hr-opacity);
+
+$input-focus-box-shadow : none;
+$border-color : rgba($secondary, 0.1);
+
+
+
+
+@import "../node_modules/bootstrap/scss/mixins/banner";
 @include bsBanner("");
+
 
 // scss-docs-start import-stack
 // Configuration
-@import "./_bs5/functions";
-@import "./_bs5/variables";
-@import "./_bs5/maps";
-@import "./_bs5/mixins";
-@import "./_bs5/utilities";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 // Layout & components
-@import "./_bs5/root";
-@import "./_bs5/reboot";
-@import "./_bs5/type";
-@import "./_bs5/images";
-@import "./_bs5/containers";
-@import "./_bs5/grid";
-@import "./_bs5/tables";
-@import "./_bs5/forms";
-@import "./_bs5/buttons";
-@import "./_bs5/transitions";
-@import "./_bs5/dropdown";
-@import "./_bs5/button-group";
-@import "./_bs5/nav";
-@import "./_bs5/navbar";
-@import "./_bs5/card";
-@import "./_bs5/accordion";
-@import "./_bs5/breadcrumb";
-@import "./_bs5/pagination";
-@import "./_bs5/badge";
-@import "./_bs5/alert";
-@import "./_bs5/progress";
-@import "./_bs5/list-group";
-@import "./_bs5/close";
-@import "./_bs5/toasts";
-@import "./_bs5/modal";
-@import "./_bs5/tooltip";
-@import "./_bs5/popover";
-@import "./_bs5/carousel";
-@import "./_bs5/spinners";
-@import "./_bs5/offcanvas";
-@import "./_bs5/placeholders";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+//@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+//@import "../node_modules/bootstrap/scss/dropdown";
+//@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+//@import "../node_modules/bootstrap/scss/navbar";
+//@import "../node_modules/bootstrap/scss/card";
+//@import "../node_modules/bootstrap/scss/accordion";
+//@import "../node_modules/bootstrap/scss/breadcrumb";
+//@import "../node_modules/bootstrap/scss/pagination";
+//@import "../node_modules/bootstrap/scss/badge";
+//@import "../node_modules/bootstrap/scss/alert";
+//@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+//@import "../node_modules/bootstrap/scss/close";
+//@import "../node_modules/bootstrap/scss/toasts";
+//@import "../node_modules/bootstrap/scss/modal";
+//@import "../node_modules/bootstrap/scss/tooltip";
+//@import "../node_modules/bootstrap/scss/popover";
+//@import "../node_modules/bootstrap/scss/carousel";
+//@import "../node_modules/bootstrap/scss/spinners";
+//@import "../node_modules/bootstrap/scss/offcanvas";
+//@import "../node_modules/bootstrap/scss/placeholders";
 
 // Helpers
-@import "./_bs5/helpers";
+@import "../node_modules/bootstrap/scss/helpers";
 
 // Utilities
-@import "./_bs5/utilities/api";
+@import "../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+
+.container-fluid {
+   max-width: 1400px;
+}
+
+#id-kb {
+
+   margin: 0 auto;
+   text-align: center;
+   font-weight: normal;
+}
+
+// 
+.kb-row {
+   margin: 0;
+   padding: 0;
+   display: grid;
+   grid-template-columns: repeat(14, 1fr);
+   gap: 4px;
+
+}
+
+.kb-key {
+
+
+   margin-bottom: 4px;
+   border-radius: $border-radius;
+   line-height: 1;
+   cursor: pointer;
+
+   padding: .5rem;
+}
+
+.long-key {
+   grid-column-start: 13;
+   grid-column-end: 15;
+}
+
+.actions {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   margin-bottom: 1rem;
+   gap: 4px;
+
+   .btn {
+
+      line-height: 1;
+      font-family: sans-serif;
+
+      &>div div {
+         font-size: 0.8rem;
+         margin-top: 0.2rem;
+      }
+
+   }
+}
+
+// media query light mode
+@media (prefers-color-scheme: light) {
+   body {
+      background-color: #f4f6f9;
+      color: $dark;
+   }
+
+   .kb-key {
+      &:hover:not(.btn) {
+         background: $gray-100;
+
+      }
+   }
+
+   .kb-key {
+      border: 1px solid $gray-200;
+      background: $white;
+   }
+
+   .kb-special {
+      background: rgb(0 0 0 / 10%);
+
+   }
+
+   .color-body {
+      background-color: #FFF;
+   }
+}
+
+// media query dark mode
+
+@media (prefers-color-scheme: dark) {
+   body {
+      background-color: $dark;
+      color: #fff;
+   }
+
+   .kb-key {
+      background: $dark;
+      color: #fff;
+
+      &:hover {
+         background: #333;
+
+      }
+   }
+
+
+
+   .kb-special {
+      background: rgb(0 0 0 / 20%);
+
+   }
+
+   .form-control {
+      background: $dark !important;
+      color: #ffffff !important;
+   }
+
+   // colors
+   .color-wrap {
+      background-color: rgb(0 0 0 / 10%)
+   }
+
+   .kb-key {
+      border: 1px solid rgb(255 255 255 / 10%);
+   }
+}
+
+.kb-row-13 {
+   grid-template-columns: repeat(13, 1fr);
+}
+
+.kb-row-12 {
+   grid-template-columns: repeat(12, 1fr);
+}
+
+.kb-row-11 {
+   grid-template-columns: repeat(11, 1fr);
+}
+
+.kb-row-10 {
+   grid-template-columns: repeat(10, 1fr);
+}
+
+.kb-row-9 {
+   grid-template-columns: repeat(9, 1fr);
+}
+
+.kb-row-8 {
+   grid-template-columns: repeat(8, 1fr);
+}
+
+.kb-row-7 {
+   grid-template-columns: repeat(7, 1fr);
+}
+
+// 
+
+.color-body {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+//@at-root
+
+.menu {
+   @extend .list-unstyled;
+
+
+   margin-top: 1rem;
+
+
+   li {
+
+      margin-right: 1rem;
+
+      a {
+         display: inline-block;
+         text-decoration: none;
+         padding: .5rem 0;
+
+         color: inherit;
+
+         &.active,
+         &:hover {
+            color: $primary;
+         }
+      }
+   }
+
+}
+
+ul.menu a {
+   font-size: 1.6rem;
+   font-weight: 700;
+}

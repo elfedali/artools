@@ -1,362 +1,572 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Best Arabic keyboard">
-    <title>Arabic keyboard</title>
-    <link rel="stylesheet" href="css/theme.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Best Arabic keyboard">
+  <title>Arabic keyboard</title>
+  <link rel="stylesheet" href="css/theme.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Arabic Keyboard</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">Keyboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/colors">Colors</a>
-                        </li>
-                    </ul>
+
+
+  <main id="main">
+    <div class="container-fluid my-3">
+      <div class="row">
+        <div class="col-lg-3">
+
+          <!-- logo -->
+          <a href="/">
+            <img src="./logo.png" alt="arabic keyword" srcset="" width="60">
+          </a>
+
+
+          <ul class="menu">
+            <li>
+              <a href="/" class="active">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="ms-2">Keyboard</span>
+              </a>
+            </li>
+
+
+            <li>
+              <a href="/colors/">
+                <i class="bi bi-palette-fill"></i>
+                <span class="ms-2">Colors</span>
+              </a>
+            </li>
+
+            <!-- <li>
+              <a href="/todo/">
+                <i class="bi bi-info-circle-fill"></i>
+                <span class="ms-2">To do</span>
+              </a>
+            </li> -->
+
+          </ul>
+
+        </div>
+        <div class="col-lg-6 ">
+          <div class="actions d-grid">
+            <button class="btn btn-outline-danger" id="delete_text">
+              <div>
+                <i class="bi bi-trash"></i>
+                <div>
+                  Delete
                 </div>
+              </div>
+            </button>
+            <button class="btn btn-outline-info" id="openTranslateEn">
+              <div>
+                <i class="bi bi-translate text-small me-1"></i>
+                <div>
+                  Translate
+                </div>
+              </div>
+            </button>
+            <button class="btn btn-outline-primary" id="openGoogle">
+              <div>
+                <i class="bi bi-google text-small me-1"></i>
+                <div>
+                  Google
+                </div>
+              </div>
+            </button>
+            <button class="btn btn-outline-danger" id="openYoutube">
+              <div>
+                <i class="bi bi-youtube text-small me-1"></i>
+                <div>
+                  Youtube
+                </div>
+              </div>
+            </button>
+
+            <button class="btn btn-outline-success" id="copy">
+              <div>
+                <i class="bi bi-clipboard-check text-small me-1"></i>
+                <div>Copy</div>
+              </div>
+            </button>
+
+          </div>
+          <form class="mb-3" dir="rtl">
+            <div class="form-group">
+              <textarea name="text" id="formControlTextarea" rows="4" class="form-control w-100"></textarea>
             </div>
-        </nav>
-    </header>
-
-    <main id="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Arabic keyboard</h1>
+          </form>
 
 
+
+
+          <!--start Keyboard-->
+          <div id="id-kb">
+            <div class="kb-inner">
+              <div class="kb-row">
+
+
+
+                <div class="kb-key" data-value="ض">
+                  <span>
+                    ض
+                  </span>
                 </div>
-                <!-- /.col-lg-12 -->
-                <div class="col-lg-12">
 
 
-
-
-                    <hr class="text-danger">
-
-                    <div id="keyboard">
-                        <div class="keyboard-keys mt-3 d-flex  flex-column align-items-center" id="keys">
-                            <div class="d-flex">
-
-                                <button class="btn btn-light key m-1" data-value="ض">
-                                    <span>
-                                        ض
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ص">
-                                    <span>
-                                        ص
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ث">
-                                    <span>ث</span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ق">
-                                    <span>
-                                        ق
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ف">
-                                    <span>
-                                        ف
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="غ">
-                                    <span>
-                                        غ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ع">
-                                    <span>
-                                        ع
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ه">
-                                    <span>
-                                        ه
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="خ">
-                                    <span>خ</span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ح">
-                                    <span>
-                                        ح
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ج">
-                                    <span>
-                                        ج
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ة">
-                                    <span>
-                                        ة
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1  text-danger" id="delete" data-value="del">
-                                    DEL <i class="fas fa-long-arrow-alt-left mr-1"></i>
-                                </button>
-
-                            </div>
-                            <div class="d-flex">
-
-                                <button class="btn btn-light key m-1" data-value="ش">
-                                    <span>
-                                        ش
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="س">
-                                    <span>
-                                        س
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ي">
-                                    <span>
-                                        ي
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ب">
-                                    <span>
-                                        ب
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ل">
-                                    <span>
-                                        ل
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ا">
-                                    <span>
-                                        ا
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ت">
-                                    <span>
-                                        ت
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ن">
-                                    <span>
-                                        ن
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="م">
-                                    <span>
-                                        م
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ك">
-                                    <span>
-                                        ك
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ال">
-                                    <span>
-                                        ال
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ڨ">
-                                    <span>
-                                        ڨ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="گ">
-                                    <span>
-                                        گ
-                                    </span>
-                                </button>
-
-
-
-                            </div>
-                            <div class="d-flex">
-
-
-                                <button class="btn btn-light key m-1" data-value="ظ">
-                                    <span>
-                                        ظ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ط">
-                                    <span>
-                                        ط
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ذ">
-                                    <span>
-                                        ذ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="د">
-                                    <span>
-                                        د
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ز">
-                                    <span>
-                                        ز
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ر">
-                                    <span>
-                                        ر
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="و">
-                                    <span>
-                                        و
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ئ">
-                                    <span>
-                                        ئ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-light key m-1" data-value="ى">
-                                    <span>
-                                        ى
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="أ">
-                                    <span>
-                                        أ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="إ">
-                                    <span>
-                                        إ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="آ">
-                                    <span>
-                                        آ
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ء">
-                                    <span>
-                                        ء
-                                    </span>
-                                </button>
-
-
-                                <button class="btn btn-outline-info key m-1" data-value="ؤ">
-                                    <span>
-                                        ؤ
-                                    </span>
-                                </button>
-
-
-                            </div>
-                        </div>
-                        <!-- /#keyboard -->
-                    </div>
-                    <!-- /.col-lg-12 -->
+                <div class="kb-key" data-value="ص">
+                  <span>
+                    ص
+                  </span>
                 </div>
-                <!-- /.row -->
+
+
+                <div class="kb-key" data-value="ث">
+                  <span>ث</span>
+                </div>
+
+
+                <div class="kb-key" data-value="ق">
+                  <span>
+                    ق
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ف">
+                  <span>
+                    ف
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="غ">
+                  <span>
+                    غ
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ع">
+                  <span>
+                    ع
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ه">
+                  <span>
+                    ه
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="خ">
+                  <span>خ</span>
+                </div>
+
+
+                <div class="kb-key" data-value="ح">
+                  <span>
+                    ح
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ج">
+                  <span>
+                    ج
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ة">
+                  <span>
+                    ة
+                  </span>
+                </div>
+
+
+                <div class="kb-key long-key" id="delete" data-value="del">
+
+                  <i class="bi bi-arrow-left"></i>
+                </div>
+
+              </div>
+
+              <div class="kb-row">
+
+                <div class="kb-key" data-value="ش">
+                  <span>
+                    ش
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="س">
+                  <span>
+                    س
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ي">
+                  <span>
+                    ي
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ب">
+                  <span>
+                    ب
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ل">
+                  <span>
+                    ل
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ا">
+                  <span>
+                    ا
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ت">
+                  <span>
+                    ت
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ن">
+                  <span>
+                    ن
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="م">
+                  <span>
+                    م
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ك">
+                  <span>
+                    ك
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ال">
+                  <span>
+                    ال
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ڨ">
+                  <span>
+                    ڨ
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="گ">
+                  <span>
+                    گ
+                  </span>
+                </div>
+                <div class="kb-key text-bg-primary" data-value="enter">
+                  <span>
+                    <i class="bi bi-arrow-return-left"></i>
+                  </span>
+                </div>
+
+
+              </div>
+              <div class="kb-row">
+
+
+                <div class="kb-key" data-value="ظ">
+                  <span>
+                    ظ
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ط">
+                  <span>
+                    ط
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ذ">
+                  <span>
+                    ذ
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="د">
+                  <span>
+                    د
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ز">
+                  <span>
+                    ز
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ر">
+                  <span>
+                    ر
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="و">
+                  <span>
+                    و
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ئ">
+                  <span>
+                    ئ
+                  </span>
+                </div>
+
+
+                <div class="kb-key" data-value="ى">
+                  <span>
+                    ى
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="أ">
+                  <span>
+                    أ
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="إ">
+                  <span>
+                    إ
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="آ">
+                  <span>
+                    آ
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ء">
+                  <span>
+                    ء
+                  </span>
+                </div>
+
+
+                <div class="kb-key kb-special" data-value="ؤ">
+                  <span>
+                    ؤ
+                  </span>
+                </div>
+
+
+              </div>
+              <hr>
+              <div class="d-grid kb-row-13 gap-1">
+
+                <div class="kb-key" data-value="@">
+                  <span>@</span>
+                </div>
+
+
+                <div class="kb-key" data-value="#">
+                  <span>#</span>
+                </div>
+
+
+                <div class="kb-key" data-value="$">
+                  <span>$</span>
+                </div>
+
+
+                <div class="kb-key" data-value="؟">
+                  <span>؟</span>
+                </div>
+
+
+                <div class="kb-key" data-value="!">
+                  <span>!</span>
+                </div>
+
+
+                <div class="kb-key" data-value="/">
+                  <span>/</span>
+                </div>
+
+
+                <div class="kb-key" data-value="-">
+                  <span>ـ</span>
+                </div>
+
+
+                <div class="kb-key" data-value="؛">
+                  <span>؛</span>
+                </div>
+
+
+                <div class="kb-key" data-value="،">
+                  <span>،</span>
+                </div>
+
+
+                <div class="kb-key" data-value=".">
+                  <span>.</span>
+                </div>
+
+
+                <div class="kb-key" data-value="=">
+                  <span>=</span>
+                </div>
+
+
+                <div class="kb-key" data-value="+">
+                  <span>+</span>
+                </div>
+
+
+                <div class="kb-key" data-value="-">
+                  <span>-</span>
+                </div>
+
+              </div>
+              <hr>
+              <div class="d-grid kb-row-10 gap-1" id="rowNumbers">
+
+                <div class="kb-key" data-value="1">
+                  <span>1</span>
+                </div>
+
+
+                <div class="kb-key" data-value="2">
+                  <span>2</span>
+                </div>
+
+
+                <div class="kb-key" data-value="3">
+                  <span>3</span>
+                </div>
+
+
+                <div class="kb-key" data-value="4">
+                  <span>4</span>
+                </div>
+
+
+                <div class="kb-key" data-value="5">
+                  <span>5</span>
+                </div>
+
+
+                <div class="kb-key" data-value="6">
+                  <span>6</span>
+                </div>
+
+
+                <div class="kb-key" data-value="7">
+                  <span>7</span>
+                </div>
+
+
+                <div class="kb-key" data-value="8">
+                  <span>8</span>
+                </div>
+
+
+                <div class="kb-key" data-value="9">
+                  <span>9</span>
+                </div>
+
+
+                <div class="kb-key" data-value="0">
+                  <span>0</span>
+                </div>
+
+              </div>
+              <!--#endregion-->
+
+
             </div>
-            <!-- /.container -->
+            <!-- /#keyboard -->
+          </div>
+        </div>
+        <div class="col-lg-3">
 
-            <img class="img-fluid" src="./images/Arabic_MAC.png" alt="">
-    </main>
+        </div>
 
-    <!--Script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+
+  </main>
+
+  <footer class="fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="m-0">
+            Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/elfedali">Abdessamad
+              EL FEDALI</a>
+          </p>
+        </div>
+        <!-- /.col-12 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!--Script-->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script> -->
+
+  <script src="js/script.js"></script>
+  <script src="js/latin_sound.js"></script>
+  <script src="js/gtranslate.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
@@ -8,39 +8,311 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Best Arabic keyboard">
     <title>Arabic keyboard</title>
-    <link rel="stylesheet" href="/css/theme.min.css">
+    <link rel="stylesheet" href="../css/theme.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="-bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Arabic Keyboard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">Keyboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/color">Colors</a>
-                    </li>
-                </ul>
+
+    <main id="main">
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-lg-3">
+
+                    <!-- logo -->
+                    <a href="/">
+                        <img src="../logo.png" alt="arabic keyword" srcset="" width="60">
+                    </a>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="/">
+                                <i class="bi bi-house-door-fill"></i>
+                                <span class="ms-2">Keyboard</span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="/colors/" class="active">
+                                <i class="bi bi-palette-fill"></i>
+                                <span class="ms-2">Colors</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="/todo/">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <span class="ms-2">To do</span>
+                            </a>
+                        </li> -->
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Grapefruit</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #ee667e;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#ee667e</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #e15160;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#e15160</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #d0414f;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#d0414f</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Bittersweet</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #f27e6b;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#f27e6b</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #f0674d;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#f0674d</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #e14f3f;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#e14f3f</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Sunflower</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #f3c973;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#f3c973</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #f3c552;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#f3c552</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #ecb342;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#ecb342</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Grass</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #a9d67e;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#a9d67e</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #98ca67;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#98ca67</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #84b94b;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#84b94b</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Mint</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #5ed4b4;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#5ed4b4</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #44c6a4;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#44c6a4</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #33b494;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#33b494</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Aqua</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #63cce7;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#63cce7</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #4db9df;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#4db9df</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #38a6d0;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#38a6d0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Blue Jeans</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #6faaea;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#6faaea</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #5b96e0;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#5b96e0</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #4883d1;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#4883d1</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Lavender</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #ab9fde;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#ab9fde</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #a58ce1;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#a58ce1</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #8f74d2;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#8f74d2</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Rose</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #e295c3;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#e295c3</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #e281b7;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#e281b7</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #cd68a5;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#cd68a5</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Skin tone</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #ebc9ad;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#ebc9ad</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #e8bf9a;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#e8bf9a</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #d9b08b;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#d9b08b</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Light gray</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #ebecee;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#ebecee</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #dbdfe1;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#dbdfe1</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #c2c8d0;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#c2c8d0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+                            <div class="color">
+                                <h5 class="color-title">Dark gray</h5>
+                                <div class="color-body">
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #a4a8b6;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#a4a8b6</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #616872;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#616872</div>
+                                    </div>
+                                    <div class="color-wrap text-center">
+                                        <div style="background-color: #3f454f;" class="pt-5 pb-4"></div>
+                                        <div class="p-2">#3f454f</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-3"></div>
+                <!-- /.col-lg-3 -->
+
+
             </div>
+            <!-- /.row -->
         </div>
-    </nav>
+        <!-- /.container -->
+
+    </main>
 
     <!--Script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
+        crossorigin="anonymous"></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
